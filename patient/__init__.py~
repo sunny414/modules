@@ -1,0 +1,14 @@
+from trytond.pool import Pool
+from .patient import *
+
+
+def register():
+    Pool.register(
+        Patient,
+        User,
+	PatientEmployer,
+        Appointment,
+        Party,
+        Address,
+        module='patient', type_='model')
+

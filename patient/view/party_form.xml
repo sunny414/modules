@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Party" col="6">
+    <field name="name" invisible="1" xexpand="1"/>
+    <field name="code" invisible="1" />
+        <field name="active" invisible="1" xexpand="0" width="25"/>
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <field name="addresses" mode="form,tree" colspan="4"
+                view_ids="party.address_view_form,party.address_view_tree_sequence"/>
+            <group col="2" colspan="4" id="lang">
+                <label name="lang"/>
+                <field name="lang" widget="selection" xexpand="0"/>
+            </group>
+            <field name="contact_mechanisms" colspan="4"
+                view_ids="party.contact_mechanism_view_tree_sequence"/>
+        </page>
+    </notebook>
+</form>
+
